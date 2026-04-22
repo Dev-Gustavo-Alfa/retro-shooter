@@ -78,7 +78,9 @@ Wave enemy count: `4 + (wave − 1) × 2`.
 
 GitHub remote: `https://github.com/Dev-Gustavo-Alfa/retro-shooter`
 
-Commit message convention used in this project:
+**Commit and push after every meaningful unit of work** — a completed feature, a bug fix, a tuning change. Never batch multiple unrelated changes into one commit. The goal is that the GitHub history always reflects a working, recoverable state of the project.
+
+Commit message convention:
 ```
 feat:     new gameplay feature
 fix:      bug fix
@@ -86,9 +88,11 @@ refactor: code restructure with no behaviour change
 chore:    tooling, deps, config
 ```
 
-Push after every meaningful change:
+Workflow for every change:
 ```
-git add <files>
-git commit -m "feat: description"
+git add <specific files changed>
+git commit -m "feat: short description of what and why"
 git push
 ```
+
+Always `git add` specific files by name rather than `git add .` to avoid accidentally committing unrelated files.
